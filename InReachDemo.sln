@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InReachDemo", "InReachDemo\InReachDemo.csproj", "{AFBBE562-885E-4E57-8451-63F2DE33360E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFBBE562-885E-4E57-8451-63F2DE33360E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBBE562-885E-4E57-8451-63F2DE33360E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBBE562-885E-4E57-8451-63F2DE33360E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBBE562-885E-4E57-8451-63F2DE33360E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA753D57-F50C-4BD2-9705-0128A5C0BDCB}
+	EndGlobalSection
+EndGlobal
