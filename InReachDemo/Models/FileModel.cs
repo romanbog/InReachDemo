@@ -46,6 +46,7 @@ namespace InReachDemo.Models
             return UploadObject(url);
         }
 
+        //Uploads FileModel.UserFile to a presigned s3 URL
         private bool UploadObject(string url)
         {
             try
@@ -77,12 +78,11 @@ namespace InReachDemo.Models
             }
         }
 
+        //Generates a presigned S3 URL for uploading.
         private string GeneratePreSignedURL()
         {
             var request = new GetPreSignedUrlRequest
             {
-                //ContentType = UserFile.ContentType,
-                
                 BucketName = "romanstempbucket",
                 Key = UserFile.FileName,
                 Verb = HttpVerb.PUT,
@@ -96,7 +96,7 @@ namespace InReachDemo.Models
         }
 
 
-        //Sends an email with generated bucket link.
+        //Sends an email with a generated bucket link.
         private bool SendEmail()
         {
             try
@@ -106,7 +106,7 @@ namespace InReachDemo.Models
                 message.Subject = "Romans File Forwarder: " + UserFile.FileName;
                 message.Body = "https://romanstempbucket.s3.amazonaws.com/" + UserFile.FileName;
 
-                //The plan originally was to use Amazon SES, but that's a pain to set up, so it's SMTP time; 
+                //The plan originally was to use Amazon SES, but that's a pain to set up, so it's time for SMTP :) 
                 SmtpClient smtp = new SmtpClient();
                 smtp.Send(message);
 
